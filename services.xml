@@ -1,0 +1,27 @@
+<AZH>
+
+    <PortBase>10000</PortBase>
+    <GateWay>            <!-- 网关 -->
+        <host>0.0.0.0</host>
+        <port>10000</port> <!-- PortBase -->
+        <max>6000</max > <!-- 最大连接数 -->
+        <Auth>0</Auth> <!-- 是否开启验证 -->
+        <Key>123456789</Key>
+    </GateWay>
+
+    <Proxy>            <!-- 网关 -->
+        <host>0.0.0.0</host>
+        <port>10001</port> <!-- PortBase -->
+        <max>6000</max > <!-- 最大连接数 -->
+        <Auth>0</Auth> <!-- 是否开启验证 -->
+        <Key>123456789</Key>
+    </Proxy>
+
+    <Social>            <!-- social -->
+        <Service name="Login" min="3000" max="3999" id = "14">  <!-- 军团 -->
+            <host>127.0.0.1</host>
+        </Service>
+    </Social>
+
+
+</AZH>

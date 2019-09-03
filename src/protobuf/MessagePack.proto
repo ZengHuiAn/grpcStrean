@@ -1,0 +1,8 @@
+syntax = "proto3";
+import "ServiceRegist.proto";
+package protobuf;
+
+service StreamService {
+    rpc RegistService (RegisterServiceRequest) returns (RegisterServiceResponse);
+}
+

@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package protobuf;
+
+message ProtoMessage{
+    string targetClient = 1;
+    SendMessageType messageType = 2; //数据传输类型
+    string fromClient = 3;
+    int32 messageID = 4;
+    repeated int64 clients = 5;
+    int32 sn = 6;
+    bytes body = 7;
+}
+
+enum SendMessageType //枚举消息类型
+{
+    RequestServer = 0;
+    ResponseServer = 1;
+    NotifyServer = 2;
+    RequestClient = 3;
+    ResponseClient = 4;
+    NotifyClient = 5;
+}

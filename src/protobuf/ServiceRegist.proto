@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package protobuf;
+
+enum MessageType //枚举消息类型
+{
+    Request = 0; //proto3版本中，首成员必须为0，成员不应有相同的值
+    Response = 1;
+    Notify = 2;
+}
+
+enum RegisterType //枚举消息类型
+{
+    Register = 0; //proto3版本中，首成员必须为0，成员不应有相同的值
+    UnRegister = 1;
+}
+
+message RegisterServiceRequest {
+    string clientName = 1;
+    RegisterType regType =2;
+}
+
+
+
+
+message RegisterServiceResponse {
+    int32 status = 1; 
+    MessageType msgType = 2;
+}
+
+
+

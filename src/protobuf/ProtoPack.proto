@@ -1,0 +1,10 @@
+
+syntax = "proto3";
+import "ServiceProto.proto";
+package protobuf;
+
+
+
+service TCPService {
+    rpc ServiceProgress ( ProtoMessage) returns ( ProtoMessage);
+}
